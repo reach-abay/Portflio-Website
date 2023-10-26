@@ -38,6 +38,19 @@
     border-color: orange;
     border-style: solid;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px
+}
+.resume svg{
+    stroke: rgb(255, 166, 0);
+    fill: orange;
+    
+}
+.resume h2{
+    font-size: 25px;
+    padding: 0;
 }
 .itemWrapper{
     display: flex;

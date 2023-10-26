@@ -11,11 +11,12 @@
     height: inherit;
     width: inherit;
     text-align: center;
+    
 }
 .certificateImage{
     height: 100%;
     width: 90%;
     padding: 20px;
     object-fit:contain;
-
+    
 }
