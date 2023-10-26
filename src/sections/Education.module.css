@@ -1,0 +1,80 @@
+.main{
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: center;
+    background: linear-gradient(rgba(51, 0, 59, 0.844),rgb(0, 0, 37));
+    overflow: hidden;
+}
+.wrapper{
+    max-width: 1377px;
+    margin: auto;
+    text-align: center;
+    height: 85vh;
+}
+.heading{
+    font-size: 50px;
+    padding-top: 30px;
+    color: orange;
+}
+.line{
+    height: 10px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+}
+.itemWrapperTop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:100%;
+    width: 100%;
+    justify-content: center;    
+    gap: 50px;
+}
+.resume{
+    border-style: solid;
+    padding: 20px;
+    border-radius: 8px;
+    border-color: orange;
+    border-style: solid;
+    cursor: pointer;
+}
+.itemWrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;    
+    gap: 30px;
+
+}
+.item{
+    border-style: solid;
+    border-radius: 8px;
+    padding: 5px;
+    border-color: orange;
+    width: 40%;
+    height: 50%;
+    min-width: 400px;
+    min-height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item div svg{
+    stroke: rgb(255, 166, 0);
+    stroke-width: .2px;
+    fill: orange;
+}
+.item div h2{
+    padding: 0;
+    font-size: 30px;
+
+}
+.item div h3{
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+.item div div{
+    font-size: 20px;
+}

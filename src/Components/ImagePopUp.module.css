@@ -1,0 +1,21 @@
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.479);
+    z-index: 999;
+}
+.wrapper{
+    height: inherit;
+    width: inherit;
+    text-align: center;
+}
+.certificateImage{
+    height: 100%;
+    width: 90%;
+    padding: 20px;
+    object-fit:contain;
+
+}

@@ -1,0 +1,55 @@
+.main {
+  width: 100%;
+  scroll-snap-align: center;
+  z-index: 0;
+}
+.wrapper {
+  max-width: 1377px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+.heading {
+  font-size: 25px;
+  padding-top: 30px;
+  color: orange;
+  position: sticky;
+  top: 0;
+}
+.line {
+  height: 10px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+}
+.itemWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  height: inherit;
+  gap: 10px;
+  padding: 25px 20px 10px 20px;
+  justify-content: center;
+}
+.item {
+  height: 400px;
+  width: 40%;
+  border-style: solid;
+  border-color: rgb(255, 166, 0);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+
+}
+.footer {
+  font-size: 30px;
+}
+.certificateImage {
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+
+}
+.title{
+    padding-top: 8px;
+}

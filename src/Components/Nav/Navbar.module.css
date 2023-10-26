@@ -1,0 +1,23 @@
+.navDiv{
+    height: 100px;
+}
+.wrapper{
+
+    margin: auto;
+    display: flex;
+    max-width:1366px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.socialDiv{
+    display: flex;
+    gap: 20px;
+    padding-right: 50px;
+}
+img{
+    height: 28px;
+}
+h2{
+    padding-left: 50px;
+}
