@@ -48,15 +48,16 @@ const textVariants={
       <div className={classes.wrapper}>
         
       <motion.div className={classes.scrollText} variants={scrollTextVariant} initial="initial" animate="animate" >
-          Websites, Android Applications, Machine Learning
-      </motion.div>
+          C, C++, SQL, Java, HTML, CSS, ReactJS, .Net C#, Machine Learning
+          </motion.div>
+
 
         <motion.div className={classes.contentWrapper} variants={textVariants} initial="initial" animate="animate">
           <motion.h2  className={classes.h2Content}>ABAY RAJU M</motion.h2>
           <motion.h1  className={classes.h1Content}>Web Developer <br/> Android Developer</motion.h1>
           <motion.div>
-            <motion.button  className={classes.button}>See my Works</motion.button>
-            <motion.button  className={classes.button}>Get in Touch</motion.button>
+            <motion.a  className={classes.button} href='#Projects'>See my Works</motion.a>
+            <motion.a  className={classes.button} href='#Contact'>Get in Touch</motion.a>
           </motion.div>
           <motion.img className={classes.scrollImage} variants={textVariants} animate="scrollButton" src={scroll} alt=""/>
         </motion.div>
