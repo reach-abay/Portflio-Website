@@ -22,22 +22,20 @@ export default function Contact(){
     const ref=useRef();
     const isInView=useInView(ref,{margin:"-100px"});
     const form = useRef();
+    const [success,setSuccess]=useState(false);
+    const [fail,setFail]=useState(false);
 
-      
     const sendEmail = (e) => {
+        setSuccess(false);
+        setFail(false);
         e.preventDefault();
         emailjs.sendForm('service_qdndahv', 'template_0p06q24', form.current, 'Y7nEUoX7m_zFcOYm6')
         .then((result) => {
-
-            alert("Successfully Submitted!")
-
+            setSuccess(true)
         }, (error) => {
-            alert(" Failed to Submit!")
-
-
+            setFail(true);
         });
     };
-
 
     return(<div id="Contact" className={classes.main}>
         <div  className={classes.wrapper} ref={ref} >
@@ -71,7 +69,11 @@ export default function Contact(){
                     <textarea placeholder='Enter Text' name='message' required/>
                     <button type='submit'>Submit</button>
                 </motion.form>
+                <div className={classes.submitResult}>
+                    {fail?"Failed to Submit!":""}
+                    {success?"Successfully Submitted!":""}
 
+                </div>
  
             </div>
         </div>
