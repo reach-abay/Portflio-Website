@@ -27,7 +27,7 @@
       "react-app/jest"
     ]
   },
-  "homepage":"https://reach-abay.github.io/Portflio-Website/",
+  "homepage":"https://reach-abay.github.io/Portflio-Website/public",
   "browserslist": {
     "production": [
       ">0.2%",
