@@ -22,7 +22,10 @@ export default function (props) {
       onClick={trigger}
     >
       <img className={classes.certificateImage} src={props.data.image} alt="" />
+     <div>
       <div className={classes.title}>{props.data.title}</div>
+
+      </div> 
 
       {openImage?<ImagePopUp trigger={trigger} image={props.data.image}></ImagePopUp>:""}
     </motion.div>

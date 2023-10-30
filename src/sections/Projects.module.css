@@ -1,80 +1,113 @@
-.main{
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    position: relative;
-    
+.main {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  position: relative;
 }
-.progress{
-    position: sticky;
-    top:0;
-    left: 0;
-    text-align: center;
-    overflow: hidden;
+.progress {
+  position: sticky;
+  top: 0;
+  left: 0;
+  text-align: center;
+  overflow: hidden;
 }
-.progressHeading{
-    color: orange;
-    font-size: 50px;
-    padding: 30px 0 0 0;
+.progressHeading {
+  color: orange;
+  font-size: 50px;
+  padding: 30px 0 0 0;
 }
-.progressBar{
-    height: 10px;
-    background-color: white;
-    min-width: 100px ;
+.progressBar {
+  height: 10px;
+  background-color: white;
+  min-width: 100px;
 }
-.itemDiv{
-    scroll-snap-align: center;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.itemDiv {
+  scroll-snap-align: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  max-width: 1377px;
+  display: flex;
+  height: 60%;
+  gap: 50px;
+}
+.imageDiv {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 
 }
-.wrapper{
-    max-width: 1377px;
-    display: flex;
-    height: 60%;
-    gap: 50px;
+.imageDiv div {
+  height: 100%;
+  width: fit-content;
+
 }
-.imageDiv{
-    flex: 1;
-    display: flex;
-    justify-content: center;
+.image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 15px;
 }
-.imageDiv div{
-    height: 100%;
-    width: fit-content;
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
-.image{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    border-radius: 15px;
+.title {
+  padding: 0;
+  font-size: 60px;
 }
-.content{
-    flex: 1;
-    display: flex;
+.description {
+  color: grey;
+}
+.button {
+  color: black;
+  text-align: center;
+  background-color: orange;
+  border-style: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  width: fit-content;
+}
+
+@media (max-width: 738px) {
+  .itemDiv {
     flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-}
-.title{
-    padding: 0;
-    font-size: 60px;
+    justify-content: flex-start;
+  }
+  .wrapper {
+    padding-top: 110px;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+  }
+  .imageDiv {
+    max-height: 60%;
 
-}
-.description{
-    color: grey;
+  }
+  .imageDiv div {
+    
+  }
+  .image {
+  }
 
-}
-.button{
-    color: black;
-    text-align: center;
-    background-color: orange;
-    border-style: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 15px;
-    width: fit-content;
+  .content {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+  .progressHeading {
+    color: orange;
+    font-size: 35px;
+    padding: 8px 0 0 0;
+  }
 }

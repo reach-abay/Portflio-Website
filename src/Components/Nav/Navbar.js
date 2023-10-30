@@ -25,9 +25,9 @@ export default function Navbar() {
       initial="initial"
       animate="animate"
     >
-      <SideMenu></SideMenu>
+     <SideMenu></SideMenu>
       <div className={classes.wrapper}>
-        <h2>Abay Raju M</h2>
+        <h2 className={classes.name}>Abay Raju M</h2>
         <div className={classes.socialDiv}>
           <a href='https://instagram.com/puzzled.potato?igshid=NGVhN2U2NjQ0Yg=='  target='_blank'>
             <img src={insta} alt=""></img>

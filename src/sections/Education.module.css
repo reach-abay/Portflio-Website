@@ -29,7 +29,7 @@
     height:100%;
     width: 100%;
     justify-content: center;    
-    gap: 50px;
+    gap: 30px;
 }
 .resume{
     border-style: solid;
@@ -90,4 +90,55 @@
 }
 .item div div{
     font-size: 20px;
+}
+
+@media (max-width:738px){
+    .heading{
+        font-size: 35px;
+        padding-top: 8px;
+        color: orange;
+    }
+    .itemWrapperTop{
+        padding-top: 180px;
+        padding-bottom: 20px;
+        gap:20px;
+        overflow-y: scroll;
+
+    }
+    .itemWrapper{
+        flex-direction: column;
+        gap:20px
+    }
+    .item{
+        min-width: 300px;
+        min-height: 300px;
+        padding: 10px;
+    }
+    .item div svg{
+        width: 70px;
+    }
+    .item div h2{
+        padding: 0;
+        font-size: 25px;
+    }
+    .item div h3{
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .item div div{
+        font-size: 16px;
+    }
+    .resume{
+        padding: 10px;
+        gap:15px
+    }
+    .resume svg{
+        width: 70px;
+
+        
+    }
+    .resume h2{
+        font-size: 20px;
+        padding: 0;
+    }
 }

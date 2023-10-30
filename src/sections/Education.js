@@ -44,15 +44,10 @@ export default function Education() {
       <div className={classes.wrapper}>
         <h1 className={classes.heading}>Education</h1>
 
-        <motion.div
-          className={classes.line}
-          initial={{ scaleX: 1.2 }}
-          whileInView={{ scaleX: 1, transition: { type: "spring" } }}
-        />
+        <motion.div className={classes.line} initial={{ scaleX: .8 }} whileInView={{ scaleX: 1, transition: { type: "spring" } }}/>
 
         <div className={classes.itemWrapperTop}>
-          <motion.div className={classes.resume} variants={variant} initial={{ y: -100 }} whileInView={{ y: 0 }} whileHover={{ scale: 1.1 }}
-            onClick={() => setOpenImageResume(true)}          >
+          <motion.div className={classes.resume} variants={variant} initial={{ y: -100 }} whileInView={{ y: 0 }} whileHover={{ scale: 1.1 }} onClick={() => setOpenImageResume(true)}>
             <svg
               width="80px"
               height="80px"
@@ -63,19 +58,12 @@ export default function Education() {
                 d="M30.88 111.05l784.9 0c11.4,0 20.64,9.24 20.64,20.64l0 583.28c0,11.4 -9.24,20.64 -20.64,20.64l-784.9 0c-11.4,0 -20.64,-9.24 -20.64,-20.64l0 -583.28c0,-11.4 9.24,-20.64 20.64,-20.64zm146.05 288.17c0,27.16 -41.29,27.16 -41.29,0 0,-32.49 15.12,-63.05 40.68,-82.92 -1.61,-2.27 -3.11,-4.62 -4.48,-7.04 -6.45,-11.45 -10.12,-24.63 -10.12,-38.63 0,-43.57 35.32,-78.89 78.89,-78.89 43.56,0 78.89,35.32 78.89,78.89 0,16.39 -5.09,32.34 -14.61,45.67 25.57,19.87 40.69,50.43 40.69,82.92 0,27.16 -41.29,27.16 -41.29,0 0,-23.44 -12.59,-44.7 -33.14,-55.92 -9.59,4.06 -20.13,6.22 -30.54,6.22 -10.41,0 -20.96,-2.16 -30.55,-6.22 -20.54,11.22 -33.13,32.48 -33.13,55.92zm-55.14 91.99l237.63 0c11.4,0 20.65,9.25 20.65,20.65l0 122.41c0,11.4 -9.25,20.65 -20.65,20.65l-237.63 0c-11.4,0 -20.64,-9.25 -20.64,-20.65l0 -122.41c0,-11.4 9.24,-20.65 20.64,-20.65zm216.99 41.29l-196.34 0 0 81.13 196.34 0 0 -81.13zm-98.17 -299.47c-20.77,0 -37.6,16.83 -37.6,37.6 0,21.09 16.9,37.6 37.6,37.6 20.72,0 37.6,-16.69 37.6,-37.6 0,-20.77 -16.84,-37.6 -37.6,-37.6zm183.62 29.12c-27.15,0 -27.15,-41.29 0,-41.29l300.64 0c27.15,0 27.15,41.29 0,41.29l-300.64 0zm46.81 363.65c-27.16,0 -27.16,-41.3 0,-41.3l253.83 0c27.15,0 27.15,41.3 0,41.3l-253.83 0zm-46.81 -272.74c-27.15,0 -27.15,-41.29 0,-41.29l300.64 0c27.15,0 27.15,41.29 0,41.29l-300.64 0zm46.81 90.91c-27.16,0 -27.16,-41.29 0,-41.29l253.83 0c27.15,0 27.15,41.29 0,41.29l-253.83 0zm0 90.92c-27.16,0 -27.16,-41.3 0,-41.3l253.83 0c27.15,0 27.15,41.3 0,41.3l-253.83 0zm324.09 -382.55l-743.6 0 0 541.98 743.6 0 0 -541.98z"
               />
             </svg>
-            <h2>RESUME</h2>
+            <h2>Resume</h2>
           </motion.div>
 
 
           <div className={classes.itemWrapper}>
-            <motion.div
-              className={classes.item}
-              variants={variant}
-              initial="initial"
-              whileInView="animate"
-              whileHover="hover"
-              onClick={() => setOpenImage1(true)}
-            >
+            <motion.div className={classes.item} variants={variant} initial="initial" whileInView="animate" whileHover="hover" onClick={() => setOpenImage1(true)}>
               <div>
                 <svg
                   width="100px"
@@ -92,14 +80,7 @@ export default function Education() {
                 <div>Senior School(2018): 85.4%</div>
               </div>
             </motion.div>
-            <motion.div
-              className={classes.item}
-              variants={variant2}
-              initial="initial"
-              whileInView="animate"
-              whileHover="hover"
-              onClick={() => setOpenImage2(true)}
-            >
+            <motion.div className={classes.item} variants={variant2} initial="initial" whileInView="animate" whileHover="hover" onClick={() => setOpenImage2(true)}>
               <div>
                 <svg
                   width="100px"
@@ -124,21 +105,9 @@ export default function Education() {
           </div>
         </div>
       </div>
-      {openImage1 ? (
-        <ImagePopUp trigger={trigger} image={plus2}></ImagePopUp>
-      ) : (
-        ""
-      )}
-      {openImage2 ? (
-        <ImagePopUp trigger={trigger} image={degree}></ImagePopUp>
-      ) : (
-        ""
-      )}
-      {openImageResume ? (
-        <ImagePopUp trigger={trigger} image={resume}></ImagePopUp>
-      ) : (
-        ""
-      )}
+      {openImage1 ? (<ImagePopUp trigger={trigger} image={plus2}></ImagePopUp>) : ("")}
+      {openImage2 ? (<ImagePopUp trigger={trigger} image={degree}></ImagePopUp>) : ("")}
+      {openImageResume ? (<ImagePopUp trigger={trigger} image={resume}></ImagePopUp>) : ("")}
     </div>
   );
 }

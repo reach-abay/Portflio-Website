@@ -1,97 +1,126 @@
-.main{
-    height: 100vh;
-    width: 100%;
-    scroll-snap-align: center;
-    color: white;
-    background: linear-gradient(rgb(0, 0, 37),rgba(51, 0, 59, 0.844));
-
+.main {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: center;
+  color: white;
+  background: linear-gradient(rgb(0, 0, 37), rgba(51, 0, 59, 0.844));
+  overflow: hidden;
 }
-.wrapper{
-    height: inherit;
-    max-width: 1377px;
-    display: flex;
+.wrapper {
+  height: inherit;
+  max-width: 1377px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 90px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.headText {
+  font-size: 70px;
+  padding-bottom: 20px;
+}
+
+.item h2 {
+  padding: 0;
+}
+.item div {
+  font-weight: 100;
+}
+.formInput {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formInput form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 500px;
+  z-index: 1;
+}
+.formInput form input {
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  padding: 15px;
+  border-color: white;
+  border-width: 2px;
+  outline-color: orange;
+}
+.formInput form textarea {
+  background-color: transparent;
+  color: white;
+  max-width: 500px;
+  min-width: 500px;
+  max-height: 500px;
+
+  border-radius: 5px;
+  padding: 10px;
+  border-color: white;
+  border-width: 2px;
+  height: 250px;
+  outline-color: rgba(255, 166, 0);
+}
+.formInput form button {
+  padding: 10px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: orange;
+  cursor: pointer;
+}
+.formInput form button:hover {
+  background-color: rgb(224, 146, 0);
+}
+.phoneSvg {
+  position: absolute;
+}
+.phoneSvg svg {
+  stroke: orange;
+  stroke-width: 0.2px;
+  width: 500px;
+}
+.submitResult {
+  padding-top: 10px;
+  height: 40px;
+}
+@media (max-width: 738px) {
+  .wrapper {
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: auto;
-    gap: 90px;
-}
-.text{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-}
-.headText{
-    font-size: 70px;
-    padding-bottom: 20px;
-}
-
-.item h2{
-    padding: 0;
-}
-.item div{
-    font-weight: 100;
-}
-.formInput{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.formInput form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 500px;
-    z-index: 1;
-}
-.formInput form input{
-    background-color: transparent;
-    color:white;
-    border-radius: 5px;
-    padding: 15px;
-    border-color: white;
-    border-width: 2px;
-    outline-color: orange;
-}
-.formInput form textarea{
-    background-color: transparent;
-    color:white;
-    max-width: 500px;
-    min-width: 500px;
+    gap:20px;
+  }
+  .headText {
+    font-size: 50px;
+  }
+  .item h2 {
+    font-size: 20px;
+  }
+  .item div {
+    font-size: 15px;
+  }
+  .formInput form {
+    width: 300px;
+  }
+  .formInput form textarea {
+    width:300px;
+    height: 100px;
+    max-width: 300px;
+    min-width:200px;
     max-height: 500px;
-
-    border-radius: 5px;
-    padding: 10px;
-    border-color: white;
-    border-width: 2px;
-    height: 250px;
-    outline-color: rgba(255, 166, 0);
-
-}
-.formInput form button{
-    padding: 10px;
-    border-radius: 5px;
-    border-style: none;
-    background-color: orange;
-    cursor: pointer;
-}
-.formInput form button:hover{
-    background-color: rgb(224, 146, 0);
-
-}
-.phoneSvg{
-    position: absolute;
-}   
-.phoneSvg svg{
+  }
+  .phoneSvg svg {
     stroke: orange;
-   stroke-width: .2px;
-   width: 500px;
-
-}
-.submitResult{
-    padding-top: 10px;
-    height:40px;
+    stroke-width: 0.2px;
+    width:300px;
+    height: 300px;
+  
+  }
 }

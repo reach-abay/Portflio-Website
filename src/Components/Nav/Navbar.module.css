@@ -2,7 +2,6 @@
     height: 100px;
 }
 .wrapper{
-
     margin: auto;
     display: flex;
     max-width:1366px;
@@ -18,6 +17,23 @@
 img{
     height: 28px;
 }
-h2{
+.name{
     padding-left: 50px;
+}
+@media(max-width:738px){
+    .navDiv{
+       height: max-content;
+    }
+    .wrapper{
+    justify-content: flex-end;
+    }
+    .socialDiv{
+        padding: 10px;
+    }
+    img{
+        height: 28px;
+    }
+    .name{
+       display: none;
+    }
 }

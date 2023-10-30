@@ -15,7 +15,7 @@ export default function Projects() {
       id: 1,
       title: "Reminder Assistant",
       description:
-        "A mobile application for capturing events to be reminded from user speech, by using speech recognition and DistilBERT NLP model. The application continuously listens to the user through the on-device mic and picks up reminders from speech.",
+        "A mobile application for capturing events to be reminded from user speech, by using speech recognition and DistilBERT NLP model. The application listens to the user through the on-device mic and picks up reminders from speech.",
       image:rema,
       link: "https://github.com/reach-abay/Reminder-Assistant",
 
@@ -47,7 +47,7 @@ export default function Projects() {
         id: 5,
         title: "Blogger",
         description:
-        "Blogger application with ReactJS and C#(net) where users can signup and upload blogs",
+        "Blogger application with ReactJS and C#(.net) where users can signup and upload blogs",
         image:blog,
         link: "https://github.com/reach-abay/Blogger",
       },

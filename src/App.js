@@ -11,8 +11,8 @@ function App() {
       <Intro></Intro>
       <Education></Education>
       <Certificates></Certificates>
-      <Projects></Projects>
-      <Contacts></Contacts>
+       <Projects></Projects>
+      <Contacts></Contacts> 
       
     </div>
   );

@@ -20,3 +20,8 @@
     object-fit:contain;
     
 }
+@media (max-width:738px){
+    .certificateImage{
+        width: 100%;
+    }
+}

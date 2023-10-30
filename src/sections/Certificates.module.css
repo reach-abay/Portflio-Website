@@ -38,7 +38,6 @@
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-
 }
 .footer {
   font-size: 30px;
@@ -48,8 +47,30 @@
   width: 100%;
   object-fit: cover;
   object-position: top;
-
+  border-radius: 5px 5px 0 0;
 }
-.title{
+.title {
+  padding-top: 8px;
+}
+@media (max-width: 738px) {
+  .heading {
+    font-size: 20px;
     padding-top: 8px;
+  }
+  .item {
+    max-height: 250px;
+    width: 100%;
+  }
+  .certificateImage {
+    height: 75%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+  .item div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+  }
 }
