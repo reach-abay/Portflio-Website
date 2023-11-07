@@ -1,9 +1,12 @@
 import classes from "./SideMenu.module.css";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import {deviceContext} from "../../App.js"
+import { useContext } from "react";
 
 export default function SideMenu() {
   const [open, setOpen] = useState(false);
+  const deviceName=useContext(deviceContext);
 
   const variants = {
     open: {
@@ -48,6 +51,9 @@ export default function SideMenu() {
         <motion.a href='#Certificates' variants={itemVariant} whileHover={{scale:1.1}} whileTap={{scale:.9}} onClick={() => {setOpen((prev) => !prev);}}>Certificates</motion.a>
         <motion.a href='#Projects' variants={itemVariant} whileHover={{scale:1.1}} whileTap={{scale:.9}} onClick={() => {setOpen((prev) => !prev);}}>Projects</motion.a>
         <motion.a href='#Contact' variants={itemVariant} whileHover={{scale:1.1}} whileTap={{scale:.9}} onClick={() => {setOpen((prev) => !prev);}}> Contact</motion.a>
+       
+      {deviceName==="Mobile"?<div className={classes.hint}>Please use PC for a better UI Experience</div>:""}
+
       </motion.div>
 
       <button className={classes.menuButton} onClick={() => {setOpen((prev) => !prev);}}> 
@@ -63,7 +69,6 @@ export default function SideMenu() {
           closed:{d:"M5 29L32.6033 29"}}}/>
         </svg>
     </button>
-
     </motion.div>
   );
 }

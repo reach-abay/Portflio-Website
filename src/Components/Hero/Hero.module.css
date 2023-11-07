@@ -11,7 +11,6 @@
     margin: auto;
     max-width: 1377px;
     height: inherit;
-
 }
 .contentWrapper{
     width: 50%;
@@ -40,9 +39,14 @@
     top: 0;
     right: 0;
     height: 100%;
+
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .image{
-    height: 100%;
+    height: 80%;
 }
 .button{
     padding: 15px  15px 15px 15px;
@@ -81,7 +85,13 @@
         height: calc(100vh - 70px);
     }
     .imageDiv{
-        display: none;        
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+    .image{
+        z-index: -1;
+        object-fit: contain;
     }
     .h1Content{
         font-size: 40px;
@@ -92,8 +102,17 @@
         justify-content: center;
         text-align: center;
     }
+    .contentWrapper div{
+        height: fit-content;
+    }
     .button{
         padding: 15px  15px 15px 15px;
         margin: 5px;
+    }
+    .scrollImage{
+        position: absolute;
+        bottom: 20px;
+        width:40px;
+        height: 35px;
     }
 }

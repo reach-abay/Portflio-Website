@@ -26,6 +26,12 @@ a{
     margin-top: 5px;
     font-size: 30px;
 }
+.hint{
+    position: fixed;
+    bottom: 5px;
+    color: grey;
+    text-align: center;
+}
 @media (max-width: 738px){
 
     .menuButton{
@@ -38,4 +44,5 @@ a{
         width: 100%;
         overflow: hidden;
     }
+ 
 }

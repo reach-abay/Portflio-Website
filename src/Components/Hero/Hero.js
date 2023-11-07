@@ -46,6 +46,11 @@ const textVariants={
   return (
     <div className={classes.mainDiv}>
       <div className={classes.wrapper}>
+      
+        <div className={classes.imageDiv}>
+          <img className={classes.image} src={hero} alt=""></img>
+        </div>  
+
         
       <motion.div className={classes.scrollText} variants={scrollTextVariant} initial="initial" animate="animate" >
           C, C++, SQL, Java, HTML, CSS, ReactJS, .Net C#, Machine Learning
@@ -63,9 +68,6 @@ const textVariants={
         </motion.div>
 
 
-        <div className={classes.imageDiv}>
-          <img className={classes.image} src={hero} alt=""></img>
-        </div>
 
       </div>
     </div>

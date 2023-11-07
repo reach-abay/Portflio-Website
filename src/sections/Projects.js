@@ -6,10 +6,14 @@ import nft from "../resources/projs/nft.png";
 import rema from "../resources/projs/rema.png";
 import vqa from "../resources/projs/vqa.png";
 import wg from "../resources/projs/wg.png";
+import {deviceContext} from "../App.js"
+import { useContext } from "react";
 
 
 
 export default function Projects() {
+
+  const deviceName=useContext(deviceContext);
   const items = [
     {
       id: 1,
@@ -62,11 +66,16 @@ export default function Projects() {
 
         <div className={classes.itemDiv} >
             <div  className={classes.wrapper}>
-                <motion.div className={classes.imageDiv} initial={{opacity:0,y:100}} whileInView={{opacity:1,y:0}}>
+            {deviceName==="Mobile"?<motion.div className={classes.imageDiv} initial={{opacity:0,y:100}} whileInView={{opacity:1,y:0}}>
+                    
+                      <img className={classes.image} src={item.image} alt=""></img>
+                    
+                </motion.div>:<motion.div className={classes.imageDiv} initial={{opacity:0,y:100}} whileInView={{opacity:1,y:0}}>
                     <div>
                       <img className={classes.image} src={item.image} alt=""></img>
                     </div>
-                </motion.div>
+                </motion.div>}
+                
                 <motion.div className={classes.content} initial={{opacity:0,y:-100}} whileInView={{opacity:1,y:0}}>
                     <h2 className={classes.title}>{item.title}</h2>
                     <p className={classes.description}>{item.description}</p>

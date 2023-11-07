@@ -6,6 +6,7 @@ import plus2 from "../resources/certs/plus2.png";
 import degree from "../resources/certs/degree.png";
 import resume from "../resources/certs/resume.png";
 
+ 
 export default function Education() {
   const variant = {
     initial: {
@@ -32,6 +33,8 @@ export default function Education() {
   const [openImage1, setOpenImage1] = useState(false);
   const [openImage2, setOpenImage2] = useState(false);
   const [openImageResume, setOpenImageResume] = useState(false);
+  
+
 
   function trigger() {
     setOpenImage1(false);
@@ -40,14 +43,16 @@ export default function Education() {
   }
 
   return (
-    <div id="Education" className={classes.main}>
-      <div className={classes.wrapper}>
-        <h1 className={classes.heading}>Education</h1>
+    <div id="Education" className={classes.main}>       
 
+     
+     <div className={classes.wrapper}> 
+
+        <h1 className={classes.heading}>Education</h1>
         <motion.div className={classes.line} initial={{ scaleX: .8 }} whileInView={{ scaleX: 1, transition: { type: "spring" } }}/>
 
         <div className={classes.itemWrapperTop}>
-          <motion.div className={classes.resume} variants={variant} initial={{ y: -100 }} whileInView={{ y: 0 }} whileHover={{ scale: 1.1 }} onClick={() => setOpenImageResume(true)}>
+          <motion.div className={classes.resume} variants={variant} initial={{ y: -20 }} whileInView={{ y: 0 }} whileHover={{ scale: 1.1 }} onClick={() => setOpenImageResume(true)}>
             <svg
               width="80px"
               height="80px"
@@ -60,8 +65,6 @@ export default function Education() {
             </svg>
             <h2>Resume</h2>
           </motion.div>
-
-
           <div className={classes.itemWrapper}>
             <motion.div className={classes.item} variants={variant} initial="initial" whileInView="animate" whileHover="hover" onClick={() => setOpenImage1(true)}>
               <div>
@@ -90,11 +93,9 @@ export default function Education() {
                 >
                   <polygon
                     points="368 350.643 256 413.643 144 350.643 144 284.081 112 266.303 112 369.357 256 450.357 400 369.357 400 266.303 368 284.081 368 350.643"
-                    class="ci-primary"
                   />
                   <path
                     d="M256,45.977,32,162.125v27.734L256,314.3,448,207.637V296h32V162.125ZM416,188.808l-32,17.777L256,277.7,128,206.585,96,188.808,73.821,176.486,256,82.023l182.179,94.463Z"
-                    class="ci-primary"
                   />
                 </svg>
                 <h2>College</h2>
@@ -105,6 +106,11 @@ export default function Education() {
           </div>
         </div>
       </div>
+
+
+
+
+
       {openImage1 ? (<ImagePopUp trigger={trigger} image={plus2}></ImagePopUp>) : ("")}
       {openImage2 ? (<ImagePopUp trigger={trigger} image={degree}></ImagePopUp>) : ("")}
       {openImageResume ? (<ImagePopUp trigger={trigger} image={resume}></ImagePopUp>) : ("")}
